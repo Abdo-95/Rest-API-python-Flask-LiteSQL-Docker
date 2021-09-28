@@ -42,3 +42,4 @@ def movies():
         cursor = cursor.execute(sql, (new_movie,))
         conn.commit()
         return f"Movie with the id: {cursor.lastrowid} created seccessfully"
+        
