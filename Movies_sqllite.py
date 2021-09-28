@@ -25,7 +25,8 @@ def movies():
     #grab the cursor Object
     cursor = conn.cursor()
     if request.method == 'GET':
-        # This will grab all Movies in the database and save them in cursor variable
+        #This will grab all Movies in
+        #the database and save them in cursor variable
         cursor = conn.execute("SELECT * FROM Movie")
         allmovies = [
             dict(id=row[0], Movie_Name = row[1])
