@@ -10,6 +10,4 @@ sql_query = """ CREATE TABLE Movie (
     id integer PRIMARY KEY , 
     Movie_Name text NOT NULL
     )"""
-
-
 cursor.execute(sql_query)
