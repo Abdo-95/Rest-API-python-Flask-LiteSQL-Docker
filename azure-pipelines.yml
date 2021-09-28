@@ -18,9 +18,10 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 - script: |
-    python -m pip install flake8
-    flake8 .
-  displayName: 'Run lint tests'
+    pip install pytest pytest-azurepipelines
+    pip install pytest-cov
+    pytest --doctest-modules --junitxml=junit/test-results.xml --cov=. --cov-report=xml
+  displayName: 'pytest'
 - task: PublishTestResults@2
   condition: succeededOrFailed()
   inputs:
