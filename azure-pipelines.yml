@@ -23,3 +23,14 @@ steps:
     python -m pip install flake8
     flake8 . || true
   displayName: 'Run lint tests'
+
+  variables:
+    imageName: 'pipelines-javascript-docker'
+
+  steps:
+    - task: Docker@2
+    displayName: Build an image
+    inputs:
+    repository: $(imageName)
+    command: build
+    Dockerfile: app/Dockerfile
