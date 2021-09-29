@@ -1,5 +1,6 @@
 # Starter pipeline
 
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -27,10 +28,11 @@ steps:
   variables:
     imageName: 'pipelines-javascript-docker'
 
-  steps:
-    - task: Docker@2
-    displayName: Build an image
-    inputs:
-    repository: $(imageName)
-    command: build
-    Dockerfile: app/Dockerfile
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Azure Container Registry'
+    azureSubscription: 'Azure for Students(8509b3d0-71a6-4205-ad8e-bb992cac7468)'
+    azureContainerRegistry: '{"loginServer":"yyyyyy.azurecr.io", "id" : "/subscriptions/8509b3d0-71a6-4205-ad8e-bb992cac7468/resourceGroups/DefaultResourceGroup-DEWC/providers/Microsoft.ContainerRegistry/registries/yyyyyy"}'
+    dockerComposeFile: '**/docker-compose.yml'
+    projectName: 'Task4'
+    action: 'Run a Docker Compose command'
