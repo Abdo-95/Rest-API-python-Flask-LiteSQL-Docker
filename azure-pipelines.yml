@@ -27,6 +27,6 @@ steps:
     containerregistrytype: 'Azure Container Registry'
     azureSubscription: 'Azure for Students(8509b3d0-71a6-4205-ad8e-bb992cac7468)'
     azureContainerRegistry: '{"loginServer":"yyyyyy.azurecr.io", "id" : "/subscriptions/8509b3d0-71a6-4205-ad8e-bb992cac7468/resourceGroups/DefaultResourceGroup-DEWC/providers/Microsoft.ContainerRegistry/registries/yyyyyy"}'
-    dockerComposeFile: '/Dockerfile'
+    dockerComposeFile: '**/docker-compose.yml'
     projectName: 'Task4'
     action: 'Run a Docker Compose command'
