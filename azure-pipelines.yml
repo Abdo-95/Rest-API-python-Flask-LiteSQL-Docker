@@ -30,3 +30,4 @@ steps:
     dockerComposeFile: '**/docker-compose.yml'
     projectName: 'Task4'
     action: 'Run a Docker Compose command'
+    dockerComposeCommand: rm
