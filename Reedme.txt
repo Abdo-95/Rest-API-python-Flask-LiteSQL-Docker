@@ -1,20 +1,11 @@
-Tasks on Python Flask, Rest APIs and Postman
+Create an Azure DevOps Pipeline
+Used the app from Task1 here.
 
-Create a new python project 
+Pushed my code into an Azure DevOps repo.
+run a pipeline 
 
-Created a simple webpage that returns “Hello World” in route “/”
+Run a test in the pipeline this was the lint test
 
-Created a REST API where we can add movie titles to a SQLite instance
+Create docker image and Pushed into Azure Container Registry using the Docker-compose
 
-Setting up my pipenv
-
-Opening the shell in the virtual enviroment ... pipenv shell
-
-Installing Flask and setting the FLASK_APP= "App_name"
-
-running the flask app, flask run
-
-Test out our APIs with Postman with the ip 127.0.0.1
-
-
-https://www.linkedin.com/learning/flask-essential-training/create-your-first-route-in-a-flask-project?autoplay=true&trk=learning-course_tocItem&upsellOrderOrigin=default_guest_learning
+All files of the pipeline were uploaded to this repo
