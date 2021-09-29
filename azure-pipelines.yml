@@ -25,8 +25,6 @@ steps:
     flake8 . || true
   displayName: 'Run lint tests'
 
-  variables:
-    imageName: 'pipelines-javascript-docker'
 
 - task: DockerCompose@0
   inputs:
